@@ -1,0 +1,16 @@
+[package]
+authors = ["kizkoh"]
+name = "pnet-study-netmap"
+version = "0.1.0"
+
+[dependencies]
+
+[dependencies.pnet]
+git = "https://github.com/kizkoh/libpnet"
+features = ["netmap"]
+
+[dependencies.netmap_sys]
+version = "0.1.1"
+# Uncomment this line where you wish to use features guarded by the
+# NETMAP_WITH_LIBS macro in C.
+features = ["netmap_with_libs"]

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+docker run -ti --rm \
+       --name veth-netmap \
+       -v $(readlink -f ./examples):/examples \
+       -v $(readlink -f ./pnet-study-netmap):/pnet-study-netmap \
+       -v /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/libgcc_s.so.1:/usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/libgcc_s.so.1 \
+       -v /dev/netmap:/dev/netmap \
+       --privileged=true \
+       --net=bridge \
+       veth-netmap /bin/bash
