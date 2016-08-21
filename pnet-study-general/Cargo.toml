@@ -1,0 +1,9 @@
+[package]
+authors = ["kizkoh"]
+name = "pnet-study-general"
+version = "0.1.0"
+
+[dependencies]
+
+[dependencies.pnet]
+version = "0.12.0"
