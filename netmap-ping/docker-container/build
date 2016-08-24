@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+# Change working directory
+cd "$(dirname $(readlink -f $0))"
+
+[ -z "${UID}" ] && UID="$(id -u)"
+[ -z "${GID}" ] && GID="$(id -g)"
+
+# Create Dockerfile
+cat <<EOF > Dockerfile
+FROM debian:jessie
+
+RUN apt-get -yq update && \\
+    apt-get install -yq net-tools strace
+
+EOF
+
+# Build container
+docker build -t veth-netmap . && rm -fv ./Dockerfile

@@ -1,0 +1,14 @@
+[package]
+authors = ["kizkoh"]
+name = "netmap-ping"
+version = "0.1.0"
+
+[dependencies]
+libc = "0.2.15"
+rand = "0.3.14"
+time = "0.1.35"
+
+[dependencies.pnet]
+features = ["netmap"]
+git = "https://github.com/kizkoh/libpnet"
+optional = false
