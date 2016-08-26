@@ -21,7 +21,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "gcc"
-version = "0.3.33"
+version = "0.3.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -56,14 +56,14 @@ name = "netmap_sys"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "gcc 0.3.33 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gcc 0.3.35 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.15 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "pnet"
 version = "0.12.0"
-source = "git+https://github.com/kizkoh/libpnet#23d554903afe76d6541d1349db3bf5c3b36baae4"
+source = "git+https://github.com/kizkoh/libpnet#97b960dd01717fbe6d2d37a7b04a1929083c6aa4"
 dependencies = [
  "libc 0.2.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "netmap_sys 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -77,7 +77,7 @@ dependencies = [
 [[package]]
 name = "pnet_macros"
 version = "0.10.0"
-source = "git+https://github.com/kizkoh/libpnet#23d554903afe76d6541d1349db3bf5c3b36baae4"
+source = "git+https://github.com/kizkoh/libpnet#97b960dd01717fbe6d2d37a7b04a1929083c6aa4"
 dependencies = [
  "regex 0.1.73 (registry+https://github.com/rust-lang/crates.io-index)",
  "syntex 0.42.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -87,7 +87,7 @@ dependencies = [
 [[package]]
 name = "pnet_macros_support"
 version = "0.1.1"
-source = "git+https://github.com/kizkoh/libpnet#23d554903afe76d6541d1349db3bf5c3b36baae4"
+source = "git+https://github.com/kizkoh/libpnet#97b960dd01717fbe6d2d37a7b04a1929083c6aa4"
 
 [[package]]
 name = "regex"

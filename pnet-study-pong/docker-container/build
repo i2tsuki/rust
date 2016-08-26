@@ -8,11 +8,11 @@ cd "$(dirname $(readlink -f $0))"
 [ -z "${GID}" ] && GID="$(id -g)"
 
 # Create Dockerfile
-cat <<EOF > Dockerfile 
+cat <<EOF > Dockerfile
+RUN apt-get -yq update && \\
+    apt-get install -yq net-tools
 FROM debian:jessie
 
-RUN apt-get -yq update && \\
-    apt-get install -yq iperf3
 EOF
 
 # Build container
